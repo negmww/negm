@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEGM PRODUCTION: Hosting innovative projects like Vulgar, Noqta Charity, and more.">
+    <title>NEGM PRODUCTION Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #000; color: #fff; margin: 0; padding: 0; line-height: 1.6; overflow-x: hidden; text-transform: uppercase; }
+        .hero { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden; }
+        .hero video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+        .hero .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 0; }
+        .hero nav { position: absolute; top: 0; left: 0; width: 100%; background: transparent; padding: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 2; }
+        .hero nav .logo { height: 90px; transition: transform 0.3s, box-shadow 0.3s; }
+        .hero nav .logo:hover { transform: scale(1.1); box-shadow: 0 0 15px rgba(212, 175, 55, 0.8); }
+        .hero nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        .hero nav li { margin: 0 25px; }
+        .hero nav a { color: #fff; text-decoration: none; font-weight: 700; transition: color 0.3s, text-shadow 0.3s; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        .hero nav a:hover { color: #D4AF37; text-shadow: 0 0 8px rgba(212, 175, 55, 0.8); }
+        .hero .content { z-index: 1; margin-top: 100px; }
+        .hero h1 { font-size: 3.5em; font-weight: 700; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(212, 175, 55, 0.5); margin: 0; animation: fadeIn 1.5s; }
+        .hero p { font-size: 1.4em; font-weight: 300; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin: 20px 0; }
+        .projects { padding: 100px 20px; text-align: center; background: rgba(0,0,0,0.95); position: relative; }
+        .projects video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; z-index: -1; }
+        .projects .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 0; }
+        .projects h2 { font-size: 2.8em; font-weight: 700; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(212, 175, 55, 0.5); margin-bottom: 50px; z-index: 1; position: relative; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+        .project-card { background: transparent; border: none; padding: 30px; border-radius: 20px; transition: transform 0.4s, box-shadow 0.4s; animation: fadeInUp 1s; cursor: pointer; text-decoration: none; color: inherit; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .project-card:hover { transform: translateY(-15px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.6); }
+        .project-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 15px; loading: lazy; }
+        .project-card .logo-text { font-size: 1.8em; font-weight: 700; margin: 15px 0; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+        .status { display: inline-block; padding: 10px 15px; border-radius: 25px; font-weight: bold; font-size: 0.9em; margin: 15px 0; position: relative; }
+        .active { background: linear-gradient(45deg, #4CAF50, #66BB6A); color: #fff; box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); animation: pulse 2s infinite; } /* Modern glow and pulse */
+        .active::before { content: '✓'; position: absolute; left: 8px; top: 50%; transform: translateY(-50%); font-size: 1.2em; } /* Check icon */
+        .inactive { background: linear-gradient(45deg, #F44336, #EF5350); color: #fff; }
+        .contact { padding: 100px 20px; background: rgba(0,0,0,0.95); text-align: center; position: relative; }
+        .contact video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; z-index: -1; }
+        .contact .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 0; }
+        .contact h2 { font-size: 2.8em; font-weight: 700; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(212, 175, 55, 0.5); margin-bottom: 50px; z-index: 1; position: relative; }
+        .contact .email-button { background: linear-gradient(45deg, #D4AF37, #B8860B); color: #000; padding: 18px 35px; border: none; border-radius: 12px; cursor: pointer; font-weight: 700; font-size: 1.2em; transition: transform 0.3s, box-shadow 0.3s; margin-bottom: 30px; text-decoration: none; display: inline-block; } /* Email button */
+        .contact .email-button:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5); }
+        .contact form { max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
+        .contact input, .contact textarea { width: 100%; padding: 18px; margin: 18px 0; border: 1px solid #333; border-radius: 12px; background: rgba(0,0,0,0.8); color: #fff; font-family: 'Poppins', sans-serif; transition: border-color 0.3s; }
+        .contact input:focus, .contact textarea:focus { border-color: #D4AF37; outline: none; }
+        .contact button { background: linear-gradient(45deg, #D4AF37, #B8860B); color: #000; padding: 18px 35px; border: none; border-radius: 12px; cursor: pointer; font-weight: 700; font-size: 1.2em; transition: transform 0.3s, box-shadow 0.3s; }
+        .contact button:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5); }
+        .back-to-top { position: fixed; bottom: 20px; right: 20px; background: #D4AF37; color: #000; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5em; cursor: pointer; display: none; z-index: 20; transition: opacity 0.3s; }
+        .back-to-top.show { display: block; }
+        footer { text-align: center; padding: 40px; background: #000; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0% { box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); } 50% { box-shadow: 0 0 20px rgba(76, 175, 80, 0.8); } 100% { box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); } } /* Pulse animation for active */
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5em; } .projects h2, .contact h2 { font-size: 2em; } .project-grid { grid-template-columns: 1fr; } .hero nav { flex-direction: column; } .project-card img { height: 200px; } .hero nav .logo { height: 70px; } }
+    </style>
+</head>
+<body>
+    <section id="hero" class="hero">
+        <video autoplay loop muted playsinline>
+            <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,br_800k/v1764454712/ssstik.io_1764454178215_pahqgm.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <nav>
+            <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456906/Untitled-2_wipzir.png" alt="Negm Worldwide Logo" class="logo">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>NEGM PRODUCTION</h1>
+            <p>Your Gateway to Innovative Projects</p>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <video autoplay loop muted playsinline>
+            <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,br_800k/v1764454712/ssstik.io_1764454178215_pahqgm.mov" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <h2>Our Hosted Projects</h2>
+        <div class="project-grid">
+            <a href="negm-apparel.html" class="project-card">
+                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1763589017/logo_for_the_website_pbsszm.png" alt="Vulgar Logo">
+                <div class="logo-text">Vulgar</div>
+                <p>Vulgar clothing brand with edgy designs.</p>
+                <div class="status active">Active</div>
+            </a>
+            <a href="house-boy-coffee.html" class="project-card">
+                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456580/logo_outlined_kbbdps.png" alt="House Boy Coffee Logo">
+                <h3>House Boy Coffee</h3>
+                <p>Premium coffee blends for every moment.</p>
+                <div class="status active">Active</div>
+            </a>
+            <a href="boi-italy-restaurant.html" class="project-card">
+                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764457817/boi_italy_logo_sc8jhk.png" alt="Boi Italy Restaurant Logo">
+                <h3>Boi Italy Restaurant</h3>
+                <p>Authentic Italian cuisine in a cozy setting.</p>
+                <div class="status active">Active</div>
+            </a>
+            <a href="good-network.html" class="project-card">
+                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456641/Untitled-4_esihu7.png" alt="Good Network Logo">
+                <h3>Good Network</h3>
+                <p>Networking platform for connecting people.</p>
+                <div class="status active">Active</div>
+            </a>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <video autoplay loop muted playsinline>
+            <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,br_800k/v1764454712/ssstik.io_1764454178215_pahqgm.mov" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <h2>Contact Us</h2>
+        <a href="mailto:negm.ww1@gmail.com" class="email-button">Email Us</a> <!-- Direct email redirect -->
+        <form action="https://formspree.io/your-email" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+    
+    <footer>
+        <p>&copy; 2023 NEGM PRODUCTION. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Back-to-top button visibility
+        window.addEventListener('scroll', () => {
+            const button = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
