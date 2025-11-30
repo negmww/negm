@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"> <!-- iOS safe area -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#000"> <!-- Android status bar -->
+    <meta name="theme-color" content="#000">
     <meta name="description" content="NEGM PRODUCTION: Hosting innovative projects like Vulgar, Noqta Charity, and more.">
     <title>NEGM PRODUCTION Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
         .hero nav li { margin: 0 25px; }
         .hero nav a { color: #fff; text-decoration: none; font-weight: 700; transition: color 0.3s, text-shadow 0.3s; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); padding: 10px; min-height: 44px; min-width: 44px; display: flex; align-items: center; }
         .hero nav a:hover { color: #D4AF37; text-shadow: 0 0 8px rgba(212, 175, 55, 0.8); }
-        .hamburger { display: none; font-size: 2em; cursor: pointer; color: #fff; background: none; border: none; padding: 10px; min-height: 44px; min-width: 44px; position: absolute; top: 20px; right: 20px; z-index: 3; } /* Fixed position for phones */
+        .hamburger { display: none; font-size: 2em; cursor: pointer; color: #fff; background: none; border: none; padding: 10px; min-height: 44px; min-width: 44px; position: absolute; top: 20px; right: 20px; z-index: 3; }
         .hero .content { z-index: 1; margin-top: 100px; }
         .hero h1 { font-size: 3.5em; font-weight: 700; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(212, 175, 55, 0.5); margin: 0; animation: fadeIn 1.5s; }
         .hero p { font-size: 1.4em; font-weight: 300; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin: 20px 0; }
@@ -52,21 +52,19 @@
         .back-to-top { position: fixed; bottom: 20px; right: 20px; background: #D4AF37; color: #000; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 1.5em; cursor: pointer; display: none; z-index: 20; transition: opacity 0.3s; min-width: 60px; min-height: 60px; }
         .back-to-top.show { display: block; }
         footer { text-align: center; padding: 40px; background: #000; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+        footer .mobile-nav { display: none; margin-bottom: 20px; } /* Hidden by default, shown on mobile */
+        footer .mobile-nav a { background: #D4AF37; color: #000; padding: 15px 20px; margin: 0 10px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; min-width: 100px; min-height: 50px; transition: background 0.3s; }
+        footer .mobile-nav a:hover { background: #B8860B; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes slowFlash { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
-        /* Mobile (phones) - Perfect for iPhone and Samsung */
+        /* Mobile (phones) */
         @media (max-width: 768px) {
-            body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); } /* iOS safe areas */
+            body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
             .hero h1 { font-size: 2.5em; }
             .hero p { font-size: 1.2em; }
-            .hero nav { padding: 15px; }
-            .hero nav .logo { height: 70px; }
-            .hero nav ul { position: absolute; top: 100%; left: 0; width: 100%; background: rgba(0,0,0,0.9); flex-direction: column; display: none; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.5); z-index: 3; }
-            .hero nav ul.open { display: flex; }
-            .hero nav li { margin: 10px 0; }
-            .hero nav a { padding: 15px; font-size: 1.1em; justify-content: center; min-height: 50px; }
-            .hamburger { display: block; } /* Shows on phones */
+            .hero nav { display: none; } /* Hide nav on phones */
+            .hamburger { display: none; } /* Hide hamburger */
             .hero .content { margin-top: 80px; }
             .projects { padding: 80px 15px; }
             .projects h2 { font-size: 2em; }
@@ -78,7 +76,10 @@
             .contact h2 { font-size: 2em; }
             .contact .email-button, .contact button { padding: 20px; font-size: 1.1em; min-width: 180px; min-height: 60px; }
             .contact input, .contact textarea { padding: 20px; font-size: 1em; min-height: 60px; }
-            .back-to-top { width: 70px; height: 70px; font-size: 1.8em; bottom: env(safe-area-inset-bottom); right: 20px; } /* iOS bottom safe area */
+            .back-to-top { width: 70px; height: 70px; font-size: 1.8em; bottom: env(safe-area-inset-bottom); right: 20px; }
+            footer { padding: 60px 15px; }
+            footer .mobile-nav { display: block; } /* Show mobile nav in footer */
+            footer p { margin-top: 20px; }
         }
         /* Tablet */
         @media (max-width: 1024px) and (min-width: 769px) {
@@ -146,4 +147,6 @@
     
     <section id="contact" class="contact">
         <video autoplay loop muted playsinline>
-            <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,
+            <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,br_800k/v1764454712/ssstik.io_1764454178215_pahqgm.mov" type="video/mp4">
+        </video>
+        <
