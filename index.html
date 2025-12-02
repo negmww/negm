@@ -52,7 +52,7 @@
         .back-to-top { position: fixed; bottom: 20px; right: 20px; background: #D4AF37; color: #000; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 1.5em; cursor: pointer; display: none; z-index: 20; transition: opacity 0.3s; min-width: 60px; min-height: 60px; }
         .back-to-top.show { display: block; }
         footer { text-align: center; padding: 40px; background: #000; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
-        footer .mobile-nav { display: none; margin-bottom: 20px; } /* Hidden by default, shown on mobile */
+        footer .mobile-nav { display: none; margin-bottom: 20px; }
         footer .mobile-nav a { background: #D4AF37; color: #000; padding: 15px 20px; margin: 0 10px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; min-width: 100px; min-height: 50px; transition: background 0.3s; }
         footer .mobile-nav a:hover { background: #B8860B; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -63,8 +63,8 @@
             body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
             .hero h1 { font-size: 2.5em; }
             .hero p { font-size: 1.2em; }
-            .hero nav { display: none; } /* Hide nav on phones */
-            .hamburger { display: none; } /* Hide hamburger */
+            .hero nav { display: none; }
+            .hamburger { display: none; }
             .hero .content { margin-top: 80px; }
             .projects { padding: 80px 15px; }
             .projects h2 { font-size: 2em; }
@@ -78,7 +78,7 @@
             .contact input, .contact textarea { padding: 20px; font-size: 1em; min-height: 60px; }
             .back-to-top { width: 70px; height: 70px; font-size: 1.8em; bottom: env(safe-area-inset-bottom); right: 20px; }
             footer { padding: 60px 15px; }
-            footer .mobile-nav { display: block; } /* Show mobile nav in footer */
+            footer .mobile-nav { display: block; }
             footer p { margin-top: 20px; }
         }
         /* Tablet */
@@ -119,29 +119,29 @@
         <h2>Our Hosted Projects</h2>
         <div class="project-grid">
             <a href="negm-apparel.html" class="project-card">
-                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1763589017/logo_for_the_website_pbsszm.png" alt="Vulgar Logo">
-                <div class="logo-text">Vulgar</div>
-                <p>Vulgar clothing brand with edgy designs.</p>
+                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764641156/logo_text_tmc4nh.png" alt="Negm Apparel Logo">
+                <div class="logo-text">Negm Apparel</div>
+                <p>Negm Apparel is a mysterious street-luxury universe built for the ones who move differently.</p>
                 <div class="status active"></div>
             </a>
             <a href="house-boy-coffee.html" class="project-card">
                 <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456580/logo_outlined_kbbdps.png" alt="House Boy Coffee Logo">
                 <h3>House Boy Coffee</h3>
-                <p>Premium coffee blends for every moment.</p>
+                <p>Boy Coffee Shop & Bagels - Warm bagels, strong coffee, clean vibes.</p>
                 <div class="status active"></div>
             </a>
-            <a href="boi-italy-restaurant.html" class="project-card">
-                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764457817/boi_italy_logo_sc8jhk.png" alt="Boi Italy Restaurant Logo">
-                <h3>Boi Italy Restaurant</h3>
-                <p>Authentic Italian cuisine in a cozy setting.</p>
+            <a href="vulgar.html" class="project-card">
+                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1763589017/logo_for_the_website_pbsszm.png" alt="Vulgar Logo">
+                <div class="logo-text">Vulgar</div>
+                <p>Vulgar is bold, raw, and unapologetic — a street-luxury brand.</p>
                 <div class="status active"></div>
             </a>
-            <a href="good-network.html" class="project-card">
+            <div class="project-card">
                 <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456641/Untitled-4_esihu7.png" alt="Good Network Logo">
                 <h3>Good Network</h3>
                 <p>Networking platform for connecting people.</p>
-                <div class="status active"></div>
-            </a>
+                <div class="status inactive"></div>
+            </div>
         </div>
     </section>
     
@@ -149,4 +149,10 @@
         <video autoplay loop muted playsinline>
             <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,br_800k/v1764454712/ssstik.io_1764454178215_pahqgm.mov" type="video/mp4">
         </video>
-        <
+        <div class="overlay"></div>
+        <h2>Contact Us</h2>
+        <a href="mailto:negm.ww1@gmail.com" class="email-button">Email Us</a>
+        <form action="https://formspree.io/your-email" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message"
