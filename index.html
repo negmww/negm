@@ -2,181 +2,205 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#000">
-    <meta name="description" content="NEGM PRODUCTION: Hosting innovative projects like Vulgar, Noqta Charity, and more.">
-    <title>NEGM PRODUCTION Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEGM WORLD WIDE AGENCY</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; background: #000; color: #fff; margin: 0; padding: 0; line-height: 1.6; overflow-x: hidden; text-transform: uppercase; }
-        .hero { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; overflow: hidden; }
-        .hero video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
-        .hero .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 0; }
-        .hero nav { position: absolute; top: 0; left: 0; width: 100%; background: transparent; padding: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 2; }
-        .hero nav .logo { height: 90px; transition: transform 0.3s, box-shadow 0.3s; }
-        .hero nav .logo:hover { transform: scale(1.1); box-shadow: 0 0 15px rgba(212, 175, 55, 0.8); }
-        .hero nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
-        .hero nav li { margin: 0 25px; }
-        .hero nav a { color: #fff; text-decoration: none; font-weight: 700; transition: color 0.3s, text-shadow 0.3s; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); padding: 10px; min-height: 44px; min-width: 44px; display: flex; align-items: center; }
-        .hero nav a:hover { color: #D4AF37; text-shadow: 0 0 8px rgba(212, 175, 55, 0.8); }
-        .hamburger { display: none; font-size: 2em; cursor: pointer; color: #fff; background: none; border: none; padding: 10px; min-height: 44px; min-width: 44px; position: absolute; top: 20px; right: 20px; z-index: 3; }
-        .hero .content { z-index: 1; margin-top: 100px; }
-        .hero h1 { font-size: 3.5em; font-weight: 700; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(212, 175, 55, 0.5); margin: 0; animation: fadeIn 1.5s; }
-        .hero p { font-size: 1.4em; font-weight: 300; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); margin: 20px 0; }
-        .projects { padding: 100px 20px; text-align: center; background: rgba(0,0,0,0.95); position: relative; }
-        .projects video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; z-index: -1; }
-        .projects .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 0; }
-        .projects h2 { font-size: 2.8em; font-weight: 700; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(212, 175, 55, 0.5); margin-bottom: 50px; z-index: 1; position: relative; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
-        .project-card { background: transparent; border: none; padding: 30px; border-radius: 20px; transition: transform 0.4s, box-shadow 0.4s; animation: fadeInUp 1s; cursor: pointer; text-decoration: none; color: inherit; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-        .project-card:hover { transform: translateY(-15px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.6); }
-        .project-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 15px; loading: lazy; }
-        .project-card .logo-text { font-size: 1.8em; font-weight: 700; margin: 15px 0; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
-        .status { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin: 15px 0; }
-        .active { background: #4CAF50; animation: slowFlash 3s infinite; }
-        .inactive { background: #F44336; }
-        .contact { padding: 100px 20px; background: rgba(0,0,0,0.95); text-align: center; position: relative; }
-        .contact video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; z-index: -1; }
-        .contact .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 0; }
-        .contact h2 { font-size: 2.8em; font-weight: 700; color: #fff; text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0 0 10px rgba(212, 175, 55, 0.5); margin-bottom: 50px; z-index: 1; position: relative; }
-        .contact .email-button { background: #000; color: #fff; padding: 18px 35px; border: 2px solid #fff; border-radius: 12px; cursor: pointer; font-weight: 700; font-size: 1.2em; transition: all 0.3s ease; margin-bottom: 30px; text-decoration: none; display: inline-block; min-width: 150px; min-height: 50px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
-        .contact .email-button:hover { background: #fff; color: #000; border-color: #000; transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.4); }
-        .back-to-top { position: fixed; bottom: 20px; right: 20px; background: #D4AF37; color: #000; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 1.5em; cursor: pointer; display: none; z-index: 20; transition: opacity 0.3s; min-width: 60px; min-height: 60px; }
-        .back-to-top.show { display: block; }
-        footer { text-align: center; padding: 40px; background: #000; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
-        footer .mobile-nav { display: none; margin-bottom: 20px; }
-        footer .mobile-nav a { background: #D4AF37; color: #000; padding: 15px 20px; margin: 0 10px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; min-width: 100px; min-height: 50px; transition: background 0.3s; }
-        footer .mobile-nav a:hover { background: #B8860B; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes slowFlash { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
-        /* Mobile (phones) */
-        @media (max-width: 768px) {
-            body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
-            .hero h1 { font-size: 2.5em; }
-            .hero p { font-size: 1.2em; }
-            .hero nav { display: none; }
-            .hamburger { display: none; }
-            .hero .content { margin-top: 80px; }
-            .projects { padding: 80px 15px; }
-            .projects h2 { font-size: 2em; }
-            .project-grid { grid-template-columns: 1fr; gap: 30px; }
-            .project-card { padding: 20px; }
-            .project-card img { height: 200px; }
-            .project-card .logo-text { font-size: 1.5em; }
-            .contact { padding: 80px 15px; }
-            .contact h2 { font-size: 2em; }
-            .contact .email-button { padding: 20px; font-size: 1.1em; min-width: 180px; min-height: 60px; }
-            .back-to-top { width: 70px; height: 70px; font-size: 1.8em; bottom: env(safe-area-inset-bottom); right: 20px; }
-            footer { padding: 60px 15px; }
-            footer .mobile-nav { display: none; }
-            footer p { margin-top: 20px; }
+        body {
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-        /* Tablet */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .hero h1 { font-size: 3em; }
-            .projects h2, .contact h2 { font-size: 2.5em; }
-            .project-grid { grid-template-columns: repeat(2, 1fr); }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            animation: fadeInDown 1s ease-out;
+        }
+        .main-logo {
+            max-width: 200px;
+            height: auto;
+            animation: fadeInLeft 1.5s ease-out;
+        }
+        .contact-button {
+            background-color: transparent; /* Transparent background */
+            color: #ffffff; /* White text */
+            border: 1px solid #ffffff; /* White border */
+            padding: 10px 15px;
+            font-size: 1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            animation: fadeInRight 1.5s ease-out;
+        }
+        .contact-button:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+        }
+        .description {
+            max-width: 90%;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            text-transform: uppercase; /* All caps */
+            box-sizing: border-box;
+            animation: fadeInUp 2s ease-out;
+        }
+        .spacer {
+            flex-grow: 1;
+        }
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+            opacity: 0.5; /* Transparent effect */
+            padding: 0 10px;
+            box-sizing: border-box;
+            animation: fadeInUp 2.5s ease-out;
+        }
+        .project-icon {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            animation: bounceIn 3s ease-out;
+        }
+        .project-icon:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+            opacity: 0.7;
+            text-transform: uppercase;
+            animation: fadeIn 3.5s ease-out;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .main-logo {
+                max-width: 150px;
+            }
+            .contact-button {
+                margin-top: 10px;
+            }
+            .description {
+                font-size: 1em;
+                padding: 10px;
+            }
+            .projects {
+                gap: 15px;
+            }
+            .project-icon {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
 </head>
 <body>
-    <section id="hero" class="hero">
-        <video autoplay loop muted playsinline preload="metadata">
-            <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,br_800k/v1764454712/ssstik.io_1764454178215_pahqgm.mov" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay"></div>
-        <nav>
-            <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456906/Untitled-2_wipzir.png" alt="Negm Worldwide Logo" class="logo">
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
-            <ul id="nav-menu">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-            <h1>NEGM PRODUCTION</h1>
-            <p>Your Gateway to Innovative Projects</p>
-        </div>
+    <header>
+        <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456906/Untitled-2_wipzir.png" alt="NEGM WORLD WIDE Main Logo" class="main-logo">
+        <a href="mailto:negm.ww1@gmail.com" class="contact-button">CONTACT US</a>
+    </header>
+    
+    <section class="description">
+        <h2>ABOUT NEGM WORLD WIDE AGENCY</h2>
+        <p>WELCOME TO NEGM WORLD WIDE AGENCY, WHERE INNOVATION MEETS ELEGANCE. WE SPECIALIZE IN HOSTING AND SHOWCASING CUTTING-EDGE PROJECTS THAT PUSH THE BOUNDARIES OF CREATIVITY AND TECHNOLOGY. OUR PORTFOLIO FEATURES A CURATED SELECTION OF WORKS THAT EMBODY SOPHISTICATION, MUCH LIKE THE SLEEK VIBES OF DRAKE'S VOUGE AESTHETIC—MINIMALISTIC, BOLD, AND UNFORGETTABLE. FROM DIGITAL ART TO INTERACTIVE EXPERIENCES, WE BRING YOUR VISIONS TO LIFE WITH A TOUCH OF LUXURY. EXPLORE OUR PROJECTS BELOW AND DISCOVER THE ARTISTRY THAT DEFINES OUR AGENCY.</p>
     </section>
     
-    <section id="projects" class="projects">
-        <video autoplay loop muted playsinline preload="metadata">
-            <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,br_800k/v1764454712/ssstik.io_1764454178215_pahqgm.mov" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
-        <h2>Our Hosted Projects</h2>
-        <div class="project-grid">
-            <a href="negm-apparel.html" class="project-card">
-                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764641156/logo_text_tmc4nh.png" alt="Negm Apparel Logo">
-                <div class="logo-text">Negm Apparel</div>
-                <p>Negm Apparel is a mysterious street-luxury universe built for the ones who move differently.</p>
-                <div class="status active"></div>
-            </a>
-            <a href="house-boy-coffee.html" class="project-card">
-                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456580/logo_outlined_kbbdps.png" alt="House Boy Coffee Logo" style="height: 180px;">
-                <h3>House Boy Coffee</h3>
-                <p>Boy Coffee Shop & Bagels - Warm bagels, strong coffee, clean vibes.</p>
-                <div class="status active"></div>
-            </a>
-            <a href="vulgar.html" class="project-card">
-                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1763589017/logo_for_the_website_pbsszm.png" alt="Vulgar Logo">
-                <div class="logo-text">Vulgar</div>
-                <p>Vulgar is bold, raw, and unapologetic — a street-luxury brand.</p>
-                <div class="status active"></div>
-            </a>
-            <div class="project-card">
-                <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456641/Untitled-4_esihu7.png" alt="Good Network Logo">
-                <h3>Good Network</h3>
-                <p>Networking platform for connecting people.</p>
-                <div class="status inactive"></div>
-            </div>
-        </div>
-    </section>
+    <div class="spacer"></div>
     
-    <section id="contact" class="contact">
-        <video autoplay loop muted playsinline preload="metadata">
-            <source src="https://res.cloudinary.com/ds9bldncb/video/upload/q_70,f_auto,br_800k/v1764454712/ssstik.io_1764454178215_pahqgm.mov" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
-        <h2>Contact Us</h2>
-        <a href="mailto:negm.ww1@gmail.com" class="email-button">Email Us</a>
+    <section class="projects">
+        <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764641156/logo_text_tmc4nh.png" alt="Project 1" class="project-icon">
+        <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456580/logo_outlined_kbbdps.png" alt="Project 2" class="project-icon">
+        <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764998807/logo_for_the_website_s1y9aw.png" alt="Project 3" class="project-icon">
+        <img src="https://res.cloudinary.com/ds9bldncb/image/upload/v1764456641/Untitled-4_esihu7.png" alt="Project 4" class="project-icon">
     </section>
-    
-    <button class="back-to-top" onclick="scrollToTop()">↑</button>
     
     <footer>
-        <div class="mobile-nav">
-            <a href="#hero">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <p>&copy; 2023 NEGM PRODUCTION. All rights reserved.</p>
+        &COPY; 2023 NEGM WORLD WIDE AGENCY. ALL RIGHTS RESERVED.
     </footer>
-    
-    <script>
-        function toggleMenu() {
-            const navMenu = document.getElementById('nav-menu');
-            navMenu.classList.toggle('show');
-        }
-        
-        window.addEventListener('scroll', function() {
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-        
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
